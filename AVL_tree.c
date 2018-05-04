@@ -124,7 +124,7 @@ void insere(){
         }
     }
 
-    printf("Elemento Inserido!\n");
+    printf("\n\nElemento Inserido!\n");
 
     //Calculando e balanceando após inserção
     if(aux2){
@@ -297,7 +297,7 @@ int altura(struct arvore *aux){
 
 struct arvore* rot_direita(struct arvore *aux){
     struct arvore *esq = aux->esquerda;
-
+    printf("Rotacao Direita em %d\n",aux->valor);
     aux->esquerda = esq->direita;
     esq->direita = aux;
 
@@ -329,7 +329,7 @@ struct arvore* rot_direita(struct arvore *aux){
 
 struct arvore* rot_esquerda(struct arvore *aux){
     struct arvore *dir = aux->direita;
-
+    printf("Rotacao Esquerda em %d\n",aux->valor);
     aux->direita = dir->esquerda;
     dir->esquerda = aux;
 
